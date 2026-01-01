@@ -67,16 +67,14 @@ Normal users can:
 ---
 
 ## 🗂 Project Structure
-
+```bash
 task-management-system-backend/
 task-management-system/
-
-yaml
-Copy code
+```
 
 ---
 
-## ⚙️ Backend Setup
+## ⚙️ Project Setup
 ```bash
 git clone https://github.com/Ashi-Jain07/Task-Management-System
 ```
@@ -88,16 +86,14 @@ git clone https://github.com/Ashi-Jain07/Task-Management-System
 cd task-management-system-backend
 ```
 
-Install dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-Create a .env file in the root of backend folder and add:
+3. Create a .env file in the root of backend folder and add:
 ```bash
-env
-Copy code
 PORT=3000
 MONGODB_URI=your_mongodb_connection_string
 ACCESS_TOKEN_SECRET=your_access_token_secret
@@ -106,7 +102,7 @@ NODE_ENV=development
 ADMIN_EMAIL=admin@example.com
 ```
 
-Admin Role Setup
+4. Admin Role Setup
 
 Set the admin email in ADMIN_EMAIL
 
@@ -114,7 +110,7 @@ Register a user using this email
 
 That user will automatically get admin access
 
-Update CORS in server.js:
+5. Update CORS in server.js:
 
 ```js
 app.use(cors({
@@ -122,31 +118,31 @@ app.use(cors({
   credentials: true
 }));
 ```
-Start the backend server:
+6. Start the backend server:
 
 ```bash
 npm start
 ```
 
 🎨 Frontend Setup
-Navigate to frontend folder:
+1. Navigate to frontend folder:
 
 ```bash
 cd task-management-system
 ```
 
-Install dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-Create a .env file in the root of frontend folder and add:
+3. Create a .env file in the root of frontend folder and add:
 
 ```env
 VITE_API_URL=<Backend_URL>
 ```
-Start the frontend:
+4. Start the frontend:
 
 ```bash
 npm run dev
@@ -156,27 +152,26 @@ npm run dev
 /dashboard
 Accessible only to authenticated users.
 
-🧠 Role Logic Summary
-Feature	Admin	User
-View dashboard	✅	✅
-Create task	✅	❌
-Edit task	✅	❌
-Delete task	✅	❌
-View all tasks	✅	❌
-View assigned tasks	✅	✅
-Update task status	✅	✅
-Update task priority	✅	✅
-Filter by user	✅	❌
-Filter by priority	✅	✅
+## 🧠 Role Logic Summary
+
+| Feature              | Admin | User |
+|----------------------|:-----:|:----:|
+| View dashboard       | ✅    | ✅   |
+| Create task          | ✅    | ❌   |
+| Edit task            | ✅    | ❌   |
+| Delete task          | ✅    | ❌   |
+| View all tasks       | ✅    | ❌   |
+| View assigned tasks  | ✅    | ✅   |
+| Update task status   | ✅    | ✅   |
+| Update task priority | ✅    | ✅   |
+| Filter by user       | ✅    | ❌   |
+| Filter by priority   | ✅    | ✅   |
 
 📝 Notes
-Pagination is implemented to improve performance.
-
-Filtering is done on the frontend.
-
-JWT refresh tokens are stored securely using HTTP-only cookies.
-
-UI is built with Tailwind CSS for a clean and responsive design.
+1. Pagination is implemented to improve performance.
+2. Filtering is done on the frontend.
+3. JWT refresh tokens are stored securely using HTTP-only cookies.
+4. UI is built with Tailwind CSS for a clean and responsive design.
 
 📌 Conclusion
 This project demonstrates a complete role-based task management system with secure authentication, scalable backend architecture, and modern frontend UI.
