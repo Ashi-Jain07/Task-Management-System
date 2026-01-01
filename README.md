@@ -104,11 +104,11 @@ ADMIN_EMAIL=admin@example.com
 
 4. Admin Role Setup
 
-Set the admin email in ADMIN_EMAIL
+ - Set the admin email in ADMIN_EMAIL
 
-Register a user using this email
+ - Register a user using this email
 
-That user will automatically get admin access
+ - That user will automatically get admin access
 
 5. Update CORS in server.js:
 
